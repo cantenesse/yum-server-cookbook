@@ -1,0 +1,12 @@
+<VirtualHost *:80>
+        ServerAdmin root@localhost
+        ServerName localhost
+        DocumentRoot <%= @document_root %>
+        Alias <%= @alias%> <%= @repo_dir %>
+
+        <Directory <%= @repo_dir %>>
+                Options Indexes
+                Order allow,deny
+                Allow from all
+        </Directory>
+</VirtualHost>
